@@ -1,0 +1,26 @@
+{
+  "name": "ra-delete-with-confirm-button",
+  "version": "0.0.1",
+  "description": "Delete button with your custom confirm dialog for React-admin.",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itTkm/ra-delete-with-confirm-button.git"
+  },
+  "keywords": [
+    "react",
+    "react-admin",
+    "delete",
+    "button",
+    "confirm"
+  ],
+  "author": "itTkm",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/itTkm/ra-delete-with-confirm-button/issues"
+  },
+  "homepage": "https://github.com/itTkm/ra-delete-with-confirm-button#readme"
+}
