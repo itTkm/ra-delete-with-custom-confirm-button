@@ -44,7 +44,7 @@ const InformationList = props => {
         <TextField source='title' label='title' />
         <TextField source='date' label='date' />
         <TextField source='user' label='user' />
-        <DeleteButtonWithConfirmation {...props}
+        <DeleteWithCustomConfirmButton {...props}
           confirmTitle={DeleteConfirmTitle}
           confirmContent={DeleteConfirmContent}
         />
