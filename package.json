@@ -48,5 +48,11 @@
     "eslint": "^6.8.0",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-react": "^7.18.3"
+  },
+  "peerDependencies": {
+    "ra-core": "^3.2.3",
+    "react": "^16.13.0",
+    "react-admin": "^3.2.3",
+    "react-redux": "^7.2.0"
   }
 }
