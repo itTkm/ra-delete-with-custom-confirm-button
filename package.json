@@ -1,6 +1,6 @@
 {
   "name": "ra-delete-with-custom-confirm-button",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Delete button with your custom confirm dialog for React-admin.",
   "main": "lib/index.js",
   "scripts": {
