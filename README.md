@@ -16,10 +16,10 @@ yarn add ra-delete-with-custom-confirm-button
 ```js
 import DeleteWithCustomConfirmButton from 'ra-delete-with-custom-confirm-button';
 
-// Define your custom confirm title
+// Define your custom title of confirm dialog
 const DeleteConfirmTitle = 'Are you sure you want to delete this post?';
 
-// Define your custom confirm contents
+// Define your custom contents of confirm dialog
 const DeleteConfirmContent = props => {
   return (
     <SimpleShowLayout {...props} >
