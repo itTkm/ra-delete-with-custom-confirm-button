@@ -1,0 +1,43 @@
+{
+  "env": {
+    "es6": true
+  },
+  "extends": [
+    "plugin:react/recommended"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "react/forbid-prop-types": ["off"],
+    "react/prop-types": ["warn"],
+    "react/jsx-no-bind": ["off"],
+    "react/jsx-indent": ["off"],
+    "react/jsx-indent-props": ["off"],
+    "react/jsx-filename-extension": ["off"],
+    "import/no-named-as-default": ["off"],
+    "no-unused-vars": [
+      "error",
+      {
+        "ignoreRestSiblings": true
+      }
+    ]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}

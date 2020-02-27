@@ -1,26 +1,52 @@
 {
-  "name": "ra-delete-with-confirm-button",
+  "name": "ra-delete-with-custom-confirm-button",
   "version": "0.0.1",
   "description": "Delete button with your custom confirm dialog for React-admin.",
   "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src",
+    "build": "babel src --out-dir lib"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/itTkm/ra-delete-with-confirm-button.git"
+    "url": "git+https://github.com/itTkm/ra-delete-with-custom-confirm-button.git"
   },
   "keywords": [
     "react",
     "react-admin",
     "delete",
     "button",
+    "custom",
     "confirm"
   ],
   "author": "itTkm",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/itTkm/ra-delete-with-confirm-button/issues"
+    "url": "https://github.com/itTkm/ra-delete-with-custom-confirm-button/issues"
   },
-  "homepage": "https://github.com/itTkm/ra-delete-with-confirm-button#readme"
+  "homepage": "https://github.com/itTkm/ra-delete-with-custom-confirm-button#readme",
+  "dependencies": {
+    "@material-ui/core": "^4.9.4",
+    "@material-ui/icons": "^4.9.1",
+    "classnames": "^2.2.6",
+    "prop-types": "^15.7.2",
+    "ra-core": "^3.2.3",
+    "react": "^16.13.0",
+    "react-admin": "^3.2.3",
+    "react-redux": "^7.2.0",
+    "recompose": "^0.30.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-react": "^7.8.3",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.0.6",
+    "eslint": "^6.8.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-react": "^7.18.3"
+  }
 }
