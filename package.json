@@ -1,6 +1,6 @@
 {
   "name": "ra-delete-with-custom-confirm-button",
-  "version": "0.0.3",
+  "version": "0.0.2",
   "description": "Delete button with your custom confirm dialog for React-admin.",
   "main": "lib/index.js",
   "scripts": {
@@ -27,15 +27,9 @@
   },
   "homepage": "https://github.com/itTkm/ra-delete-with-custom-confirm-button#readme",
   "dependencies": {
-    "@material-ui/core": ">=1.4.0",
-    "@material-ui/icons": ">=1.0.0",
-    "classnames": ">=2.2.6",
-    "prop-types": ">=15.6.1",
-    "ra-core": ">=2,3,4",
-    "react": ">=16.0.0",
-    "react-admin": ">=2.3.4",
-    "react-redux": ">=5.0.7",
-    "recompose": ">=0.26.0"
+    "classnames": "^2.2.6",
+    "prop-types": "^15.7.2",
+    "recompose": "^0.30.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
@@ -43,15 +37,22 @@
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/preset-env": "^7.8.4",
     "@babel/preset-react": "^7.8.3",
+    "@material-ui/core": "^4.9.4",
+    "@material-ui/icons": "^4.9.1",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.0.6",
     "eslint": "^6.8.0",
     "eslint-plugin-import": "^2.20.1",
-    "eslint-plugin-react": "^7.18.3"
+    "eslint-plugin-react": "^7.18.3",
+    "ra-core": "^3.2.3",
+    "react": "^16.13.0",
+    "react-admin": "^3.2.3",
+    "react-redux": "^7.2.0"
   },
   "peerDependencies": {
-    "ra-core": ">=2.3.4",
-    "react": ">=16.0.0",
-    "react-admin": ">=2.3.4"
+    "ra-core": "^3.2.3",
+    "react": "^16.0.0",
+    "react-admin": "^3.0.0 || ^2.3.4",
+    "react-redux": "^7.2.0"
   }
 }
