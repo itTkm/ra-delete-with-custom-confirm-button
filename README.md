@@ -57,4 +57,4 @@ export default InformationList;
 
 ## License
 
-This library is licensed under the [MIT Licence](./LICENCE).
+This library is licensed under the [MIT License](./LICENSE).
