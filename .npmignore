@@ -1,6 +1,7 @@
 .vscode/
 node_modules/
 src/
+example/
 .babelrc
 .eslintrc
 .gitignore
