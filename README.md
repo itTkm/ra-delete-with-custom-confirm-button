@@ -6,6 +6,8 @@
 
 Delete button with your custom confirm dialog for React-admin.
 
+![Demo](img/ra-delete-with-custom-confirm-button.gif "Demo")
+
 ## Installation
 
 ```bash
@@ -15,6 +17,20 @@ npm install --save ra-delete-with-custom-confirm-button
 # via yarn
 yarn add ra-delete-with-custom-confirm-button
 ```
+
+## Demo
+
+After having cloned this repository, run the following commands:
+
+```bash
+cd example/
+yarn install
+yarn start
+```
+
+And then browse to [http://localhost:8080/](http://localhost:8080/).
+
+The credentials are *login/password*
 
 ## Usage
 
@@ -44,7 +60,7 @@ const InformationList = props => {
         <TextField source='title' label='title' />
         <TextField source='date' label='date' />
         <TextField source='user' label='user' />
-        <DeleteWithCustomConfirmButton {...props}
+        <DeleteWithCustomConfirmButton
           confirmTitle={DeleteConfirmTitle}
           confirmContent={DeleteConfirmContent}
         />

@@ -1,4 +1,3 @@
-const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 const IgnoreNotFoundExportPlugin = require('ignore-not-found-export-plugin');
@@ -47,56 +46,6 @@ module.exports = {
     ),
     resolve: {
         extensions: ['.ts', '.js', '.tsx', '.json'],
-        // alias: {
-        //     'ra-core': path.join(
-        //         __dirname,
-        //         '..',
-        //         '..',
-        //         'packages',
-        //         'ra-core',
-        //         'src'
-        //     ),
-        //     'ra-ui-materialui': path.join(
-        //         __dirname,
-        //         '..',
-        //         '..',
-        //         'packages',
-        //         'ra-ui-materialui',
-        //         'src'
-        //     ),
-        //     'react-admin': path.join(
-        //         __dirname,
-        //         '..',
-        //         '..',
-        //         'packages',
-        //         'react-admin',
-        //         'src'
-        //     ),
-        //     'ra-data-fakerest': path.join(
-        //         __dirname,
-        //         '..',
-        //         '..',
-        //         'packages',
-        //         'ra-data-fakerest',
-        //         'src'
-        //     ),
-        //     'ra-i18n-polyglot': path.join(
-        //         __dirname,
-        //         '..',
-        //         '..',
-        //         'packages',
-        //         'ra-i18n-polyglot',
-        //         'src'
-        //     ),
-        //     'ra-input-rich-text': path.join(
-        //         __dirname,
-        //         '..',
-        //         '..',
-        //         'packages',
-        //         'ra-input-rich-text',
-        //         'src'
-        //     ),
-        // },
     },
     devServer: {
         stats: {
