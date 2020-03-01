@@ -12,7 +12,6 @@ import dataProvider from './dataProvider';
 import i18nProvider from './i18nProvider';
 import Layout from './Layout';
 import posts from './posts';
-import users from './users';
 import tags from './tags';
 
 render(

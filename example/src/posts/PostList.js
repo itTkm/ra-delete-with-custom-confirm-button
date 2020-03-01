@@ -174,7 +174,6 @@ const PostList = props => {
               <EditButton />
               <ShowButton />
               <DeleteWithCustomConfirmButton
-                {...props}
                 confirmTitle={DeleteConfirmTitle}
                 confirmContent={DeleteConfirmContent}
               />

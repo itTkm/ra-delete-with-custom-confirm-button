@@ -9,11 +9,26 @@ import {
     useEditController,
     Link,
     ReferenceInput,
+    SaveButton,
     SimpleForm,
     TextInput,
     Title,
+    Toolbar,
     minLength,
 } from 'react-admin'; // eslint-disable-line import/no-unresolved
+
+import DeleteWithCustomConfirmButton from "ra-delete-with-custom-confirm-button";
+import {
+    DeleteConfirmTitle,
+    DeleteConfirmContent
+} from './CommentDeleteConfirm';
+
+const useToolbarStyles = makeStyles({
+    toolbar: {
+        display: 'flex',
+        justifyContent: 'space-between',
+    },
+});
 
 const LinkToRelatedPost = ({ record }) => (
     <Link to={`/posts/${record.post_id}`}>
@@ -40,6 +55,19 @@ const OptionRenderer = ({ record }) => (
 );
 
 const inputText = record => `${record.title} - ${record.id}`;
+
+const CustomToolbar = props => {
+    const classes = useToolbarStyles();
+    return (
+        <Toolbar {...props} classes={classes}>
+            <SaveButton />
+            <DeleteWithCustomConfirmButton
+                confirmTitle={DeleteConfirmTitle}
+                confirmContent={DeleteConfirmContent}
+            />
+        </Toolbar>
+    );
+};
 
 const CommentEdit = props => {
     const classes = useEditStyles();
@@ -71,6 +99,7 @@ const CommentEdit = props => {
                         resource={resource}
                         record={record}
                         save={save}
+                        toolbar={<CustomToolbar />}
                         version={version}
                     >
                         <TextInput disabled source="id" fullWidth />
