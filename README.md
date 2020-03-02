@@ -6,7 +6,7 @@
 
 Delete button with your custom confirm dialog for [React-admin](https://marmelab.com/react-admin/).
 
-![Demo](img/ra-delete-with-custom-confirm-button.gif "Demo")
+![Demo](img/ra-delete-with-custom-confirm-button.gif?raw=true "Demo")
 
 ## Installation
 
