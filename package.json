@@ -8,7 +8,7 @@
     "lint": "eslint src",
     "build": "babel src --out-dir lib",
     "preversion": "npm test",
-    "version": "npm run build && git add -A dist",
+    "version": "npm run build && git add --all lib",
     "postversion": "git push && git push --tags"
   },
   "repository": {
