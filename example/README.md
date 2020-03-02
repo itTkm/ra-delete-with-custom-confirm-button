@@ -9,7 +9,6 @@ After having cloned the ra-delete-with-custom-confirm-button repository, run the
 
 ```sh
 yarn install
-
 yarn start
 ```
 

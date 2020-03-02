@@ -4,7 +4,7 @@
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](./LICENSE)
 [![Build Status](https://travis-ci.org/itTkm/ra-delete-with-custom-confirm-button.svg?branch=master)](https://travis-ci.org/itTkm/ra-delete-with-custom-confirm-button)
 
-Delete button with your custom confirm dialog for React-admin.
+Delete button with your custom confirm dialog for [React-admin](https://marmelab.com/react-admin/).
 
 ![Demo](img/ra-delete-with-custom-confirm-button.gif "Demo")
 
