@@ -6878,10 +6878,10 @@ ra-data-fakerest@^3.0.0:
   dependencies:
     fakerest "~2.1.0"
 
-ra-delete-with-custom-confirm-button@^0.0.6:
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/ra-delete-with-custom-confirm-button/-/ra-delete-with-custom-confirm-button-0.0.6.tgz#d80e74786fffcf91add01c179c9b54d3b545d8ca"
-  integrity sha512-O9EqkAGu6yLMMAwsW6Rnit3eUnZmotfqgWsl1r42pauMO2k6wFmONMlD03ygYGpJ5yreQY6GeOZ2TckBQ4tDAQ==
+ra-delete-with-custom-confirm-button@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/ra-delete-with-custom-confirm-button/-/ra-delete-with-custom-confirm-button-0.1.2.tgz#bdfabae5b59f7f568a2defa04ec11e0e623c54e2"
+  integrity sha512-G7wvQ8DwjsnM7RKzo9/wxTzza1EGQyfzOE1s/xTcJP+KSLpEqvNCb+Gjt9tVULaBmemwSZVQAbNU4kcvH4o/4w==
   dependencies:
     "@material-ui/core" "^4.9.4"
     classnames "^2.2.6"
