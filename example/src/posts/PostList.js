@@ -174,8 +174,8 @@ const PostList = props => {
               <EditButton />
               <ShowButton />
               <DeleteWithCustomConfirmButton
-                confirmTitle={DeleteConfirmTitle}
-                confirmContent={DeleteConfirmContent}
+                title={DeleteConfirmTitle}
+                content={DeleteConfirmContent}
               />
             </PostListActionToolbar>
           </Datagrid>

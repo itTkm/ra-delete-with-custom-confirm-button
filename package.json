@@ -33,7 +33,7 @@
     "@material-ui/core": "^4.9.4",
     "classnames": "^2.2.6",
     "prop-types": "^15.7.2",
-    "ra-custom-confirm": "^1.0.0",
+    "ra-custom-confirm": "^1.1.0-0",
     "ra-ui-materialui": "^3.3.0",
     "recompose": "^0.30.0"
   },
