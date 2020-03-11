@@ -1,19 +1,19 @@
 import React, { Component, Fragment } from 'react';
-import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { Button } from 'react-admin';
+import {
+  translate,
+  crudDelete,
+  startUndoable,
+} from 'ra-core';
+import CustomConfirm from 'ra-custom-confirm';
+import classnames from 'classnames';
+import PropTypes from 'prop-types';
 import compose from 'recompose/compose';
 import { withStyles } from '@material-ui/core/styles';
 import { fade } from '@material-ui/core/styles/colorManipulator';
 import ActionDelete from '@material-ui/icons/Delete';
-import classnames from 'classnames';
-import { translate, crudDelete, startUndoable } from 'ra-core';
-import IconCancel from '@material-ui/icons/Cancel';
-import Dialog from '@material-ui/core/Dialog';
-import DialogTitle from '@material-ui/core/DialogTitle';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogActions from '@material-ui/core/DialogActions';
-
-import { Button } from 'react-admin';
+import AlertError from '@material-ui/icons/ErrorOutline';
 
 const styles = (theme) => ({
   deleteButton: {
@@ -28,56 +28,33 @@ const styles = (theme) => ({
   }
 });
 
-const ConfirmContent = (props) => {
-  const { confirmContent } = props;
-  if (confirmContent === undefined) {
-    return (
-      <div>
-        Your actions will be logged.
-      </div>
-    );
-  } else {
-    return React.createElement(confirmContent, props);
-  }
-}
-
-const ConfirmTitle = (props) => {
-  const { confirmTitle } = props;
-  if (confirmTitle === undefined) {
-    return (
-      <DialogTitle>
-        Are you sure you want to delete this entity?
-      </DialogTitle>
-    );
-  } else {
-    return (
-      <DialogTitle>
-        {confirmTitle}
-      </DialogTitle>
-    );
-  }
-}
-
 class DeleteWithCustomConfirmButton extends Component {
   state = {
     showDialog: false
   };
 
   handleClick = (event) => {
-    event.stopPropagation();    // support with rowClick on Datagrid
+    event.stopPropagation();
     this.setState({ showDialog: true });
   };
 
-  handleCloseClick = (event) => {
-    event.stopPropagation();    // support with rowClick on Datagrid
+  handleDialogClose = () => {
     this.setState({ showDialog: false });
   };
 
   handleDelete = (event) => {
-    event.stopPropagation();    // support with rowClick on Datagrid
+    event.stopPropagation();
     event.preventDefault();
     this.setState({ showDialog: false });
-    const { dispatchCrudDelete, startUndoable, resource, record, basePath, redirect, undoable } = this.props;
+    const {
+      dispatchCrudDelete,
+      startUndoable,
+      resource,
+      record,
+      basePath,
+      redirect,
+      undoable,
+    } = this.props;
     if (undoable) {
       startUndoable(crudDelete(resource, record.id, record, basePath, redirect));
     } else {
@@ -87,42 +64,39 @@ class DeleteWithCustomConfirmButton extends Component {
 
   render() {
     const { showDialog } = this.state;
-    const { label = 'ra.action.delete', classes = {}, className } = this.props;
+    const {
+      cancel,
+      CancelIcon,
+      classes,
+      className,
+      content,
+      confirmColor,
+      DeleteIcon,
+      label,
+      title,
+    } = this.props;
+
     return (
       <Fragment>
         <Button
-          onClick={this.handleClick}
           label={label}
+          onClick={this.handleClick}
           className={classnames('ra-delete-button', classes.deleteButton, className)}
-          key="button"
         >
-          <ActionDelete />
+          <DeleteIcon />
         </Button>
-        <Dialog
-          fullWidth
-          open={showDialog}
-          onClose={this.handleCloseClick}
-          onClick={(event) => event.stopPropagation()}  // support with rowClick on Datagrid
-          aria-label="Are you sure?"
-        >
-          <ConfirmTitle {...this.props} />
-          <DialogContent>
-            <ConfirmContent {...this.props} />
-          </DialogContent>
-          <DialogActions>
-            <Button
-              onClick={this.handleDelete}
-              label={label}
-              className={classnames('ra-delete-button', classes.deleteButton, className)}
-              key="button"
-            >
-              <ActionDelete />
-            </Button>
-            <Button label="ra.action.cancel" onClick={this.handleCloseClick}>
-              <IconCancel />
-            </Button>
-          </DialogActions>
-        </Dialog>
+        <CustomConfirm {...this.props}
+          isOpen={showDialog}
+          title={title}                   // your custom title of confirm dialog
+          content={content}               // your custom contents of confirm dialog
+          confirm={label}                 // label of confirm button (default: 'Confirm')
+          confirmColor={confirmColor}     // color of confirm button ('primary' or 'warning', default: 'primary')
+          ConfirmIcon={DeleteIcon}        // icon of confirm button (default: 'ActionCheck')
+          cancel={cancel}                 // label of cancel button (default: 'Cancel')
+          CancelIcon={CancelIcon}         // icon of cancel button (default: 'AlertError')
+          onConfirm={this.handleDelete}
+          onClose={this.handleDialogClose}
+        />
       </Fragment>
     );
   }
@@ -132,21 +106,31 @@ DeleteWithCustomConfirmButton.propTypes = {
   basePath: PropTypes.string,
   classes: PropTypes.object,
   className: PropTypes.string,
-  confirmContent: PropTypes.element,  // Custom dialog contents
-  confirmTitle: PropTypes.string,     // Custom dialog title
+  confirmColor: PropTypes.string.isRequired,
+  cancel: PropTypes.string,
+  CancelIcon: PropTypes.elementType,
+  content: PropTypes.element.isRequired,
   dispatchCrudDelete: PropTypes.func.isRequired,
+  DeleteIcon: PropTypes.elementType,
   label: PropTypes.string,
   record: PropTypes.object,
   redirect: PropTypes.oneOfType([PropTypes.string, PropTypes.bool, PropTypes.func]),
   resource: PropTypes.string.isRequired,
   startUndoable: PropTypes.func,
+  title: PropTypes.string.isRequired,
   translate: PropTypes.func,
   undoable: PropTypes.bool
 };
 
 DeleteWithCustomConfirmButton.defaultProps = {
+  cancel: 'ra.action.cancel',
+  CancelIcon: AlertError,
+  confirmColor: 'warning',
+  DeleteIcon: ActionDelete,
+  label: 'ra.action.delete',
   redirect: 'list',
-  undoable: true
+  startUndoable: startUndoable,
+  undoable: true,
 };
 
 export default compose(

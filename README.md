@@ -61,8 +61,14 @@ const InformationList = props => {
         <TextField source='date' label='date' />
         <TextField source='user' label='user' />
         <DeleteWithCustomConfirmButton
-          confirmTitle={DeleteConfirmTitle}
-          confirmContent={DeleteConfirmContent}
+          title={DeleteConfirmTitle}      // your custom title of delete confirm dialog
+          content={DeleteConfirmContent}  // your custom contents of delete confirm dialog
+          label='Delete'                  // label of delete button (default: 'Delete')
+          confirmColor='warning'          // color of delete button ('warning' or 'primary', default: 'warning')
+          ConfirmIcon={ActionDelete}      // icon of delete button (default: 'ActionDelete')
+          cancel='Cancel'                 // label of cancel button (default: 'Cancel')
+          CancelIcon={CancelIcon}         // icon of cancel button (default: 'AlertError')
+          undoable={true}                 // undoable (default: true)
         />
       </Datagrid>
     </List>
