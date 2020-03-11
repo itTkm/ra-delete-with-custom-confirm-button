@@ -36,6 +36,8 @@ The credentials are *login/password*
 
 ```js
 import DeleteWithCustomConfirmButton from 'ra-delete-with-custom-confirm-button';
+import Delete from '@material-ui/icons/Delete';
+import ErrorOutline from '@material-ui/icons/ErrorOutline';
 
 // Define your custom title of confirm dialog
 const DeleteConfirmTitle = 'Are you sure you want to delete this post?';
@@ -65,9 +67,9 @@ const InformationList = props => {
           content={DeleteConfirmContent}  // your custom contents of delete confirm dialog
           label='Delete'                  // label of delete button (default: 'Delete')
           confirmColor='warning'          // color of delete button ('warning' or 'primary', default: 'warning')
-          ConfirmIcon={ActionDelete}      // icon of delete button (default: 'ActionDelete')
+          ConfirmIcon={Delete}            // icon of delete button (default: 'Delete')
           cancel='Cancel'                 // label of cancel button (default: 'Cancel')
-          CancelIcon={CancelIcon}         // icon of cancel button (default: 'AlertError')
+          CancelIcon={ErrorOutline}       // icon of cancel button (default: 'ErrorOutline')
           undoable={true}                 // undoable (default: true)
         />
       </Datagrid>
@@ -77,6 +79,20 @@ const InformationList = props => {
 
 export default InformationList;
 ```
+
+## props
+
+Name|Type|Description|Default
+---|---|---|---
+title|string|your custom title of delete confirm dialog|
+content|element|your custom contents of delete confirm dialog|
+label|string|label of delete button|'ra.action.delete' (`Delete` in English)
+confirmColor|string|color of delete button ('warning' or 'primary')|'warning'
+DeleteIcon|element|icon of delete button from [@material-ui/icons](https://www.npmjs.com/package/@material-ui/icons)|![Delete](https://github.com/google/material-design-icons/blob/master/action/drawable-hdpi/ic_delete_black_18dp.png?raw=true "import Delete from '@material-ui/icons/Delete';")
+cancel|string|label of cancel button|'ra.action.cancel' (`Cancel` in English)
+CancelIcon|element|icon of cancel button from [@material-ui/icons](https://www.npmjs.com/package/@material-ui/icons)|![ErrorOutline](https://github.com/google/material-design-icons/blob/master/alert/drawable-hdpi/ic_error_outline_black_18dp.png?raw=true "import ErrorOutline from '@material-ui/icons/ErrorOutline';")
+undoable|bool|undoable or not|true
+redirect|string|redirect to|'list'
 
 ## License
 

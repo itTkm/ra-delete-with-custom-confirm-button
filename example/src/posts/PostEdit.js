@@ -66,8 +66,8 @@ const CustomToolbar = props => {
     <Toolbar {...props} classes={classes}>
       <SaveButton />
       <DeleteWithCustomConfirmButton
-        confirmTitle={DeleteConfirmTitle}
-        confirmContent={DeleteConfirmContent}
+        title={DeleteConfirmTitle}
+        content={DeleteConfirmContent}
       />
     </Toolbar>
   );
