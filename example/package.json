@@ -25,7 +25,7 @@
     "html-loader": "~0.5.5",
     "html-webpack-plugin": "~3.2.0",
     "ignore-not-found-export-plugin": "^1.0.1",
-    "serve": "~9.1.0",
+    "serve": "~11.3.2",
     "style-loader": "~0.20.3",
     "wait-on": "^3.2.0",
     "webpack": "~4.5.0",
