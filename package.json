@@ -34,14 +34,14 @@
     "classnames": "^2.2.6",
     "prop-types": "^15.7.2",
     "ra-custom-confirm": "^1.1.1",
-    "ra-ui-materialui": "^3.3.0",
+    "ra-ui-materialui": "^3.13.1",
     "recompose": "^0.30.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.8.4",
+    "@babel/cli": "^7.13.0",
+    "@babel/core": "^7.9.0",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
-    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-env": "^7.9.0",
     "@babel/preset-react": "^7.8.3",
     "@material-ui/icons": "^4.9.1",
     "babel-eslint": "^10.1.0",
@@ -49,7 +49,7 @@
     "eslint": "^6.8.0",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-react": "^7.18.3",
-    "ra-core": "^3.2.3",
+    "ra-core": "^3.13.1",
     "react": "^16.13.0",
     "react-redux": "^7.2.0"
   },
