@@ -1,11 +1,23 @@
 language: node_js
-node_js:
-  - "12"
-  - "11"
-  - "10"
-  - "9"
-  - "8"
-  - "7"
-  - "6"
-script:
-  - npm run build
+
+stages:
+  # - test
+  - build
+
+jobs:
+  include:
+    # - name: Test with Node.js lts/*
+    #   stage: test
+    #   node_js: "lts/*"
+    #   script:
+    #     - npm test && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
+    - name: Build with Node.js lts/*
+      stage: build
+      node_js: "lts/*"
+      script:
+        - npm run build
+    - name: Build with Node.js stable
+      stage: build
+      node_js: "stable"
+      script:
+        - npm run build
